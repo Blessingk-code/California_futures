@@ -1,6 +1,6 @@
-# California_futures
+# California Futures - SDM and Ecoscape modelling workflows
 
-EcoScape Climate Connectivity is an integrated geospatial modeling framework that combines two complementary workflows: (1) climate-driven Species Distribution Modeling (SDM) and habitat suitability mapping, and (2) functional landscape connectivity modeling under present and future climate scenarios. Together, these workflows provide an end-to-end pipeline for predicting how climate change may alter species distributions, dispersal pathways, and ecological connectivity across landscapes.
+Here we provide an integrated geospatial modeling framework that combines two complementary workflows: (1) climate-driven Species Distribution Modeling (SDM) and habitat suitability mapping, and (2) functional landscape connectivity modeling under present and future climate scenarios using Ecoscape connectivity model. Together, these workflows provide an end-to-end pipeline for predicting how climate change may alter species distributions, dispersal pathways, and ecological connectivity across landscapes.
 
 The first workflow focuses on Species Distribution Modeling (SDM), where environmental and climatic predictors are used to generate habitat suitability surfaces for current and future climate conditions. These models produce spatially explicit habitat projections across multiple Shared Socioeconomic Pathways (SSP245, SSP370, and SSP585), enabling the identification of suitable habitat shifts under changing climate regimes. The SDM workflow supports automated raster processing, climate scenario handling, suitability map generation, and large-scale geospatial data preparation.
 
