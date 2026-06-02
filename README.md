@@ -12,7 +12,7 @@ This repository contains the supporting scripts, environmental predictor variabl
 
 The project investigates future changes in species distributions and functional habitat connectivity under multiple climate change scenarios across California using Species Distribution Modelling (SDM) and EcoScape-based connectivity modelling approaches. The repository includes current and future climate predictor variables, species presence records, SDM scripts, connectivity modelling scripts, and supporting workflows required to reproduce the analyses presented in the manuscript.
 
-**Climate Data**
+**Climate data**
 
 The _climate_varibales directories contains environmental predictor variables used for species distribution modelling, both Current and Future.
 
@@ -22,11 +22,11 @@ The Future folder contains projected climate variables used to forecast species 
 
 Raster formats: .asc.
 
-**Presence Data**
+**Presence data**
 
 The Presence_Data directory contains species occurrence records used for model calibration and evaluation. These datasets are stored as .csv, and sh contain species identifiers and geographic coordinates. Fields include species name, longitude, and latitude. 
 
-**Species Distribution Modelling Scripts**
+**Species distribution modelling scripts**
 
 The SDM_Scripts directory contains the scripts used to generate species distribution models. The SDM workflow includes environmental variable loading, covariate preprocessing, multicollinearity reduction, recursive feature elimination (RFE), pseudoabsence generation, model calibration, ensemble modelling, model evaluation, future projection, and raster export.
 
@@ -34,7 +34,7 @@ The workflow primarily uses the R packages biomod2, terra, sf, usdm, and randomF
 
 Outputs generated from the SDM workflow include habitat suitability maps, ensemble projections, binary suitability rasters, variable importance estimates, and model evaluation statistics.
 
-**Connectivity Modelling Scripts**
+**Connectivity modelling scripts**
 
 The Connectivity_Scripts directory contains the EcoScape-based connectivity modelling workflow used to evaluate functional habitat connectivity under current and future environmental conditions. The workflow uses habitat suitability outputs generated from the SDM analyses as inputs for connectivity modelling.
 
@@ -42,40 +42,39 @@ The connectivity workflow includes habitat raster loading, resistance or permeab
 
 Connectivity outputs include functional connectivity surfaces, corridor maps, dispersal probability rasters, and resistance-weighted movement layers.
 
-**Coordinate Reference Systems**
+**Coordinate reference systems**
 
 All raster and vector datasets used within the workflow should use consistent coordinate reference systems to avoid spatial misalignment and analytical inconsistencies: EPSG:3310 (California Albers) or EPSG:4326 (WGS84). Maintaining consistent projections is particularly important for raster alignment, distance calculations, and connectivity modelling.
 
-**Software Requirements
-**
+**Software requirements**
 The SDM workflow was developed using R version 4.2 or higher. Required R packages include:
 
-biomod2
-terra
-sf
-usdm
-randomForest
-dplyr
-tidyr
+- biomod2
+- terra
+- sf
+- usdm
+- randomForest
+- dplyr
+- tidyr
 
 The connectivity workflow was developed using Python version 3.10 or higher. Required Python libraries include:
 
-torch
-numpy
-rasterio
-geopandas
-pandas
-Ecoscape
-scipy
-Outputs
+- torch
+- numpy
+- rasterio
+- geopandas
+- pandas
+- Ecoscape
+- scipy
+
 
 The workflow generates two primary categories of outputs. The first includes SDM outputs such as current suitability maps, future suitability projections, ensemble predictions, binary habitat maps, and model evaluation metrics. The second includes connectivity outputs such as functional connectivity rasters, and corridor surfaces(Flow).
 
-**Reproducibility Notes**
+**Reproducibility notes**
 
 To ensure reproducibility, users should maintain identical raster resolutions, coordinate reference systems, and spatial extents across all environmental predictor variables. Variable naming conventions between current and future predictors should remain consistent throughout the workflow. Users are additionally encouraged to preserve the repository folder structure and avoid modifying script dependencies without appropriate documentation.
 
-**Intended Use**
+**Intended use**
 
 This repository is intended to support reproducibility of the California Futures Project and provide supplementary analytical material accompanying the associated manuscript. The repository is also intended to facilitate methodological reuse and adaptation within broader species distribution modelling and functional connectivity research.
 
