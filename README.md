@@ -28,7 +28,7 @@ The Presence_Data directory contains species occurrence records used for model c
 
 **Species distribution modelling scripts**
 
-The SDM_Scripts directory contains the scripts used to generate species distribution models. The SDM workflow includes environmental variable loading, covariate preprocessing, multicollinearity reduction, recursive feature elimination (RFE), pseudoabsence generation, model calibration, ensemble modelling, model evaluation, future projection, and raster export.
+The SDM script is used to generate species distribution models. The SDM workflow includes environmental variable loading, covariate preprocessing, multicollinearity reduction, recursive feature elimination (RFE), pseudoabsence generation, model calibration, ensemble modelling, model evaluation, future projection, and raster export.
 
 The workflow primarily uses the R packages biomod2, terra, sf, usdm, and randomForest. Current and future habitat suitability maps generated through this workflow form the basis for subsequent connectivity analyses.
 
@@ -36,7 +36,7 @@ Outputs generated from the SDM workflow include habitat suitability maps, ensemb
 
 **Connectivity modelling scripts**
 
-The Connectivity_Scripts directory contains the EcoScape-based connectivity modelling workflow used to evaluate functional habitat connectivity under current and future environmental conditions. The workflow uses habitat suitability outputs generated from the SDM analyses as inputs for connectivity modelling.
+The Connectivity script contains the EcoScape-based connectivity modelling workflow used to evaluate functional habitat connectivity under current and future environmental conditions. The workflow uses habitat suitability outputs generated from the SDM analyses as inputs for connectivity modelling.
 
 The connectivity workflow includes habitat raster loading, resistance or permeability surface generation, seed dispersal simulation, random propagation modelling, and connectivity computation. The workflow is implemented primarily in Python and uses libraries such as torch, numpy, rasterio, geopandas, and pandas. GPU acceleration is optionally supported for large-scale raster processing.
 
@@ -44,7 +44,7 @@ Connectivity outputs include functional connectivity surfaces, corridor maps, di
 
 **Coordinate reference systems**
 
-All raster and vector datasets used within the workflow should use consistent coordinate reference systems to avoid spatial misalignment and analytical inconsistencies: EPSG:3310 (California Albers) or EPSG:4326 (WGS84). Maintaining consistent projections is particularly important for raster alignment, distance calculations, and connectivity modelling.
+All raster and vector datasets used within the workflow should use consistent coordinate reference systems to avoid spatial misalignment and analytical inconsistencies: EPSG:3310 (California Albers). Maintaining consistent projections is particularly important for raster alignment, distance calculations, and connectivity modelling.
 
 **Software requirements**
 The SDM workflow was developed using R version 4.2 or higher. Required R packages include:
