@@ -1,4 +1,4 @@
-# California Futures - SDM and Ecoscape modelling workflows
+# California Futures project – Supporting repository
 
 **Overview**
 
